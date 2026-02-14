@@ -1,0 +1,132 @@
+\documentclass[a4paper,10pt]{article}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{fontawesome}
+
+% Page setup
+\geometry{
+    a4paper,
+    left=1.5cm,
+    right=1.5cm,
+    top=1.5cm,
+    bottom=1.5cm
+}
+
+% Remove page numbers
+\pagestyle{empty}
+
+% Customize section formatting
+\titleformat{\section}
+{\large\bfseries\color{blue!60!black}}
+{}{0em}{}[\titlerule]
+
+\titlespacing{\section}{0pt}{8pt}{4pt}
+
+% Custom commands
+\newcommand{\cvitem}[2]{
+    \textbf{#1} \hfill #2
+}
+
+\newcommand{\cventry}[4]{
+    \cvitem{#1}{#2}\\
+    \textit{#3}\\
+    #4
+    \vspace{4pt}
+}
+
+% Hyperlink setup
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    pdftitle={CV - Your Name},
+    pdfauthor={Your Name}
+}
+
+\begin{document}
+
+% Header
+\begin{center}
+    {\Huge\bfseries Your Name}\\[8pt]
+    \faEnvelope\ \href{mailto:your.email@example.com}{your.email@example.com} \quad
+    \faPhone\ +1 234 567 8900 \quad
+    \faLinkedin\ \href{https://linkedin.com/in/yourprofile}{linkedin.com/in/yourprofile} \quad
+    \faGithub\ \href{https://github.com/yourusername}{github.com/yourusername}
+\end{center}
+
+\vspace{8pt}
+
+% Professional Summary
+\section*{Professional Summary}
+Experienced professional with expertise in [your field]. Strong background in [key skills]. Proven track record of [achievements]. Seeking [position/opportunity] to leverage [skills] and contribute to [goals].
+
+% Work Experience
+\section*{Work Experience}
+
+\cventry{Job Title}{Company Name}{City, Country \hfill Month Year -- Present}{
+    \begin{itemize}[leftmargin=*, noitemsep, topsep=0pt]
+        \item Accomplished [achievement] resulting in [measurable outcome]
+        \item Led [project/initiative] involving [technologies/methods]
+        \item Collaborated with [teams/stakeholders] to deliver [results]
+        \item Implemented [solution] which improved [metric] by [percentage]
+    \end{itemize}
+}
+
+\cventry{Job Title}{Company Name}{City, Country \hfill Month Year -- Month Year}{
+    \begin{itemize}[leftmargin=*, noitemsep, topsep=0pt]
+        \item Developed [product/feature] using [technologies]
+        \item Managed [responsibility] with [scope/scale]
+        \item Optimized [process] leading to [improvement]
+        \item Trained [number] team members on [topic]
+    \end{itemize}
+}
+
+% Education
+\section*{Education}
+
+\cventry{Degree Name}{University Name}{City, Country \hfill Month Year -- Month Year}{
+    \begin{itemize}[leftmargin=*, noitemsep, topsep=0pt]
+        \item Major: [Your Major]
+        \item GPA: [X.X/4.0] (optional)
+        \item Relevant coursework: [Course 1], [Course 2], [Course 3]
+    \end{itemize}
+}
+
+% Skills
+\section*{Technical Skills}
+
+\begin{itemize}[leftmargin=*, noitemsep, topsep=0pt]
+    \item \textbf{Programming Languages:} Python, Java, JavaScript, C++, SQL
+    \item \textbf{Frameworks \& Technologies:} React, Node.js, Django, Spring Boot, Docker, Kubernetes
+    \item \textbf{Tools:} Git, Jenkins, AWS, Azure, Jira, VS Code
+    \item \textbf{Languages:} English (Native), [Language] ([Level])
+\end{itemize}
+
+% Projects (Optional)
+\section*{Selected Projects}
+
+\cventry{Project Name}{\href{https://github.com/yourusername/project}{github.com/yourusername/project}}{}{
+    \begin{itemize}[leftmargin=*, noitemsep, topsep=0pt]
+        \item Brief description of the project and its purpose
+        \item Technologies used: [Tech 1], [Tech 2], [Tech 3]
+        \item Key achievements or features implemented
+    \end{itemize}
+}
+
+% Certifications (Optional)
+\section*{Certifications}
+
+\begin{itemize}[leftmargin=*, noitemsep, topsep=0pt]
+    \item \textbf{Certification Name} -- Issuing Organization \hfill Month Year
+    \item \textbf{Certification Name} -- Issuing Organization \hfill Month Year
+\end{itemize}
+
+\end{document}

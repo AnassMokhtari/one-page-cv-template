@@ -1,0 +1,132 @@
+\documentclass[a4paper,10pt]{article}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{fontawesome}
+
+% Configuration de la page
+\geometry{
+    a4paper,
+    left=1.5cm,
+    right=1.5cm,
+    top=1.5cm,
+    bottom=1.5cm
+}
+
+% Supprimer la numérotation des pages
+\pagestyle{empty}
+
+% Personnalisation du formatage des sections
+\titleformat{\section}
+{\large\bfseries\color{blue!60!black}}
+{}{0em}{}[\titlerule]
+
+\titlespacing{\section}{0pt}{8pt}{4pt}
+
+% Commandes personnalisées
+\newcommand{\cvitem}[2]{
+    \textbf{#1} \hfill #2
+}
+
+\newcommand{\cventry}[4]{
+    \cvitem{#1}{#2}\\
+    \textit{#3}\\
+    #4
+    \vspace{4pt}
+}
+
+% Configuration des hyperliens
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    pdftitle={CV - Votre Nom},
+    pdfauthor={Votre Nom}
+}
+
+\begin{document}
+
+% En-tête
+\begin{center}
+    {\Huge\bfseries Votre Nom}\\[8pt]
+    \faEnvelope\ \href{mailto:votre.email@exemple.com}{votre.email@exemple.com} \quad
+    \faPhone\ +33 6 12 34 56 78 \quad
+    \faLinkedin\ \href{https://linkedin.com/in/votreprofil}{linkedin.com/in/votreprofil} \quad
+    \faGithub\ \href{https://github.com/votreutilisateur}{github.com/votreutilisateur}
+\end{center}
+
+\vspace{8pt}
+
+% Résumé professionnel
+\section*{Résumé Professionnel}
+Professionnel expérimenté avec expertise en [votre domaine]. Solide expérience en [compétences clés]. Historique éprouvé de [réalisations]. À la recherche de [poste/opportunité] pour mettre à profit [compétences] et contribuer à [objectifs].
+
+% Expérience professionnelle
+\section*{Expérience Professionnelle}
+
+\cventry{Titre du Poste}{Nom de l'Entreprise}{Ville, Pays \hfill Mois Année -- Présent}{
+    \begin{itemize}[leftmargin=*, noitemsep, topsep=0pt]
+        \item Réalisation de [accomplissement] résultant en [résultat mesurable]
+        \item Direction de [projet/initiative] impliquant [technologies/méthodes]
+        \item Collaboration avec [équipes/parties prenantes] pour livrer [résultats]
+        \item Mise en œuvre de [solution] qui a amélioré [métrique] de [pourcentage]
+    \end{itemize}
+}
+
+\cventry{Titre du Poste}{Nom de l'Entreprise}{Ville, Pays \hfill Mois Année -- Mois Année}{
+    \begin{itemize}[leftmargin=*, noitemsep, topsep=0pt]
+        \item Développement de [produit/fonctionnalité] utilisant [technologies]
+        \item Gestion de [responsabilité] avec [portée/échelle]
+        \item Optimisation de [processus] conduisant à [amélioration]
+        \item Formation de [nombre] membres de l'équipe sur [sujet]
+    \end{itemize}
+}
+
+% Formation
+\section*{Formation}
+
+\cventry{Nom du Diplôme}{Nom de l'Université}{Ville, Pays \hfill Mois Année -- Mois Année}{
+    \begin{itemize}[leftmargin=*, noitemsep, topsep=0pt]
+        \item Spécialisation: [Votre Spécialisation]
+        \item Mention: [Mention] (optionnel)
+        \item Cours pertinents: [Cours 1], [Cours 2], [Cours 3]
+    \end{itemize}
+}
+
+% Compétences
+\section*{Compétences Techniques}
+
+\begin{itemize}[leftmargin=*, noitemsep, topsep=0pt]
+    \item \textbf{Langages de Programmation:} Python, Java, JavaScript, C++, SQL
+    \item \textbf{Frameworks \& Technologies:} React, Node.js, Django, Spring Boot, Docker, Kubernetes
+    \item \textbf{Outils:} Git, Jenkins, AWS, Azure, Jira, VS Code
+    \item \textbf{Langues:} Français (Langue maternelle), Anglais ([Niveau])
+\end{itemize}
+
+% Projets (Optionnel)
+\section*{Projets Sélectionnés}
+
+\cventry{Nom du Projet}{\href{https://github.com/votreutilisateur/projet}{github.com/votreutilisateur/projet}}{}{
+    \begin{itemize}[leftmargin=*, noitemsep, topsep=0pt]
+        \item Brève description du projet et de son objectif
+        \item Technologies utilisées: [Tech 1], [Tech 2], [Tech 3]
+        \item Réalisations clés ou fonctionnalités implémentées
+    \end{itemize}
+}
+
+% Certifications (Optionnel)
+\section*{Certifications}
+
+\begin{itemize}[leftmargin=*, noitemsep, topsep=0pt]
+    \item \textbf{Nom de la Certification} -- Organisme Émetteur \hfill Mois Année
+    \item \textbf{Nom de la Certification} -- Organisme Émetteur \hfill Mois Année
+\end{itemize}
+
+\end{document}
